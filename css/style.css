@@ -1,0 +1,273 @@
+/* -----Necessities-----*/
+/*  */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,400,700);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: #fff;
+    font-size: 14px;
+    overflow-x: hidden;
+}
+main{
+  position: relative;
+}
+main,section,footer,nav{
+  margin-left: 0px;
+  box-sizing: border-box;
+}
+main section{
+  padding:10px;
+}
+.section-title{
+  font-size: 2rem;
+  font-weight: 500 !important;
+  text-align: center;
+  color: linear-gradient(69deg,#DB4437,#4285F4)
+}
+.underline{
+  width: 7%;
+  margin: 10px  auto;
+  border: 2px solid #264653;
+  border-radius: 4px;
+}
+/* -----HERO SECTION----- */
+.hero{
+  display: flex;
+  //background: linear-gradient(269deg,#0F9D58,#F4B400);
+  //background: linear-gradient(269deg, rgba(244, 180, 0,0.85), rgba(15, 157, 88,0.85));
+  background: #264653;
+  justify-content: center;
+  flex-flow: column wrap;
+  padding: 10px;
+}
+.hero> div{
+  margin: 0px !important;
+  box-sizing:border-box;
+  padding: 20px;
+  margin: 10px auto !important;
+}
+.hero-writeup,.login-form{
+  width: 100%;
+}
+/* .hero-writeup{
+  display:none
+} */
+.hero-writeup h2{
+  font-size: 2rem;
+  font-weight:normal;
+  margin: 1.5rem 0px;
+  color: #fff
+}
+.hero-writeup p{
+  color: #fff;
+  font-size: 1rem;
+  line-height: 2em;
+  margin-bottom: 1.5rem
+}
+.hero-writeup button{
+  background:#17B794;
+  border:0px;
+  padding:15px 30px;
+  text-transform: capitalize;
+  color: #fff
+}
+form{
+  display: flex;
+  background: rgba(255,255,255,1);
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 10px;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.7);
+}
+form h2{
+  text-align: center;
+  font-size: 2em;
+  font-weight: normal;
+  text-transform: capitalize;
+  margin: 1rem 0px;
+  color: #17B794;
+}
+/* form hr{
+  margin: 20px;
+  margin-top: 0;
+  border: 1px solid grey;
+  border-radius: 10px;
+} */
+.login-form form input, .login-form div ,.login-form p{
+  margin: 10px auto;
+  width: 90%;
+  padding: 1rem;
+  border-radius: ;
+}
+input[type=text],input[type=password]{
+  border: 0px;
+    border-bottom:1.5px solid #17B794;
+}
+input[type=text]:focus,input[type=password]:focus{
+  background: #F4B400;
+  border: 0px;
+  transition: 0.5s
+}
+ .login-form div{
+   padding: 0px;
+ }
+.login-form input[type=checkbox]{
+  width: 5%;
+  padding:10px;
+}
+.login-form input[type=submit]{
+  background: #17B794;
+  color: #fff;
+  border: 0
+}
+.login-form p{
+  padding-left: 0
+}
+.login-form p a{
+  text-decoration: none;
+  color:#4285F4;
+}
+@media screen and (min-width:768px) {
+  .hero{
+    flex-direction: row;
+  }
+  .hero> div{
+    width: 40%;
+    display: block
+  }
+  div.login-form{
+    width: 30% !important;
+  }
+}
+@media (min-width:1024px){
+  .hero{
+    height: 90vh;
+  }
+  .hero-writeup h2{
+    margin-top: 3rem;
+  }
+  div.login-form{
+    width: 30%;
+  }
+}
+/* -----END OF HERO SECTION----- */
+
+/* -----ABOUT SECTION----- */
+.about>h3{
+  margin-top: 10px;
+}
+.about .features-area{
+  display:flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.features-area .card{
+  margin: 10px auto !important;
+  width: 83%;
+  background: #17B794;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  padding: 25px 20px;
+  box-shadow: 2px 3px 3px rgba(0,0,0,0.5);
+  transition:0.5s
+}
+.card:hover{
+  transform: scale(1.1,1.1);
+  transition: ease 0.5s;
+}
+.card-icon,.card-writeup,.card button{
+  margin: 5px auto;
+  width: 70%;
+}
+.card-icon span{
+  text-align: center !important;
+  color:#fff;
+}
+.card-writeup h3{
+  text-align: center;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: normal;
+  margin: 10px 0px
+}
+.card-writeup p{
+  color: #fff;
+  opacity: 0.7;
+  text-align: center;
+  margin: 10px 0px;
+}
+.card button{
+  width: 45% !important;
+  padding: 10px 5px;
+  background:none;
+  border: 0.15em solid #fff;
+  border-radius: 4px;
+  color: #fff;
+}
+.card button:hover{
+  background: #17b794;
+  transition: 0.5s;
+}
+@media screen and (min-width:768px){
+  .about .features-area{
+    flex-flow: row wrap;
+  }
+  .features-area .card {
+    width: 32%;
+  }
+  .card button{
+    width: 30% !important;
+  }
+}
+/* -----END OF ABOUT SECTION----- */
+
+/* CONTRIBUTORS SECTION */
+
+
+
+/* END OF COTRIBUTORS SECTION */
+
+
+/* -----BENEFITS SECTION----- */
+.benefits{
+  width: 100;
+  background: rgba(29, 43, 83, 0.89);
+  box-sizing: border-box;
+  padding: 1.5rem;
+}
+.benefits h4, .benefits p, .benefits button{
+  width: 70%;
+  margin: 20px auto !important;
+  text-align: center;
+  color: #fff;
+}
+.benefits h4{
+  font-size: 2rem;
+  margin-bottom: 10px !important;
+}
+.benefits button{
+  width: 30% !important;
+  background: #17b794;
+  padding: 1rem;
+  border: 0px;
+}
+.benefits button:hover{
+  opacity: 0.5;
+  transition: 0.5s;
+}
+@media screen and (min-width:768px){
+  .benefits h4, .benefits p,{
+  width: 50%
+  }
+  .benefits button{
+    width: 20% !important;
+  }
+}
