@@ -1,0 +1,80 @@
+@font-face{
+	font-family: roboto;
+	src: url('../assets/Fonts/roboto/Roboto-Regular.ttf') format('truetype');
+}
+
+html{
+    font-size: 62.5%; /* 1rem = 10px*/
+}
+
+.rows{
+    display:flex;
+    flex-direction: row;
+}
+
+.cols{
+    display:flex;
+    flex-direction: column;
+}
+
+.link-btn{
+    text-decoration: none;
+    padding: 0.9rem;
+}
+
+.strip-btn{
+    border: none;
+    background-color: transparent;
+    color: black;
+    padding: 1rem;
+}
+
+.strip-link{
+    text-decoration: none;
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 10rem;
+    /* border: 1px solid salmon; */
+    margin-top: 3.5rem; 
+    padding: 1% 2%;
+    font-size: 1.2rem;
+}
+
+footer a:link{
+    margin: 0.5rem 0;
+    text-decoration: none;
+}
+
+footer a:link, footer a:visited{
+    color: #888;
+}
+
+footer .heading{
+    color: #555;
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem; 
+    font-weight: bold;
+}
+
+footer > *{
+    width: 100%;
+    margin: 1rem;
+}
+
+footer .links{
+    margin: auto;
+    width: auto;
+}
+
+footer .links > *{
+    margin: 1rem; 
+}
+
+footer > *:last-child *{
+    color: #888;
+    justify-content: center;
+}
