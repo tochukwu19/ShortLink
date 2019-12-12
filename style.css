@@ -1,0 +1,133 @@
+body{
+    margin: auto 0;
+    font-family: 'Teko', sans-serif;
+    font-size: 30px;
+    background: white;
+}
+
+.container{
+    margin: 1rem;
+    padding: 0.5rem;
+}
+
+h2{
+    margin: 0;
+    font-size: 40px;
+}
+
+#logo{
+    display: inline;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: left;
+    color: #17b794;
+    margin: 0;
+}
+main{
+    display: block;
+    height: 90vh;
+    /* grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(7,1fr); */
+}
+
+.home{
+    width: 50%;
+    text-align: center;
+    margin: 50px auto;
+    padding: 0.5rem;
+    padding-bottom: 0 !important;
+    margin-bottom: 0;
+}
+
+.login-nav{
+    /* display: block; */
+    list-style: none;
+    cursor: pointer;
+    margin: auto;
+    text-align: right;
+    margin-bottom: 0;
+    padding: 0;
+    border-bottom: none;
+}
+
+.login-nav__item{
+    display: inline-block;
+    color:white;
+    background: rgb(110, 110, 110);
+    border: 1px solid #1f1f1f73;
+    border-bottom: none;
+    padding: 0.1rem 1.8rem 0 1.8rem; 
+}
+
+
+.active{
+    background: white;
+    color: black;
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.63);
+    border-bottom:none ;
+}
+
+#sign-in-page,
+#sign-up-page{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: rgb(255, 255, 255);
+    margin: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    padding: 6rem;
+    box-shadow: 2px 2px 5px black;
+}
+
+#sign-up-page{
+    display: none;
+}
+
+#sign-up-page input,
+#sign-in-page input{
+    width: 80%;
+    padding: 0.6rem;
+    border: 0.3rem solid #1ba285;
+    border-radius: 25px;
+    margin-bottom: 7px;
+    outline: none;
+}
+
+#sign-up-page input,
+#sign-in-page input:focus{
+    padding: 0.7rem;
+    border: 0.3rem solid #0f5042;
+}
+
+
+.btn{
+    cursor: pointer;
+    padding: 0.5rem 1.2rem ;
+    border-radius: 35px;
+    color: rgb(255, 255, 255);
+    background: #1ba285;
+    border: 1px solid #0f5042;
+    text-transform: uppercase;
+}
+
+.btn:hover{
+    background:  #0f5042;
+    border: 1px solid #1ba285 ;
+}
+
+@media (min-width:40rem){
+    .login-nav__item{
+        padding: 1rem 4rem 0 4rem;
+    }
+
+}
+
+@media (max-width:300px){
+    .home{
+        width: 25%;
+    }
+}
