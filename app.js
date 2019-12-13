@@ -9,6 +9,7 @@ tabPanelSignUp.addEventListener('click', function () {
     tabPanelSignUp.classList.add('active');
     signInPage.style.display = 'none';
     signUpPage.style.display = 'block';
+
 })
 
 tabPanelSignIn.addEventListener('click',function () {
