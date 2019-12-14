@@ -1,6 +1,6 @@
-let tabPanelSignIn = document.querySelector('.sign-in');
+let tabPanelSignIn = document.querySelector('.log-in');
 let tabPanelSignUp = document.querySelector('.sign-up');
-let signInPage = document.querySelector('#sign-in-page');
+let signInPage = document.querySelector('#log-in-page');
 let signUpPage = document.querySelector('#sign-up-page');
 let signUpSection = document.querySelector('.sign-up-section');
 
