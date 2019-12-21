@@ -8,71 +8,106 @@
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./assets/icofont/icofont.min.css">
     <link rel="stylesheet" href="./css/dashboard.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <header>
-        <h1>
-            <span class="red">Sh</span><span class="blue">or</span><span class="yellow">tLi</span><span class="green">nk</span>
-        </h1>
-    </header>
 
     <main>
         <div class="dashboard">
             <div class="dashboard-panel">
-                <h2 class="panel-heading">DS Panel</h2>
+                <h1 class="panel-heading">DASHBOARD</h1>
                 <ul class="panel-content">
                     <li>Home</li>
-                    <li>Calender</li>
-                    <li>Tasks</li>
-                    <li>Events</li>
+                    <li class="active">Links</li>
+                    <li class="sta">Statistics</li>
+                    <li>Developer</li>
+                    
                 </ul>
             </div>
     
             <div class="dashboard-body">
                 <div class="body-header">
-                    <button class="icofont-navigation-menu strip-btn menu-btn"></button>
-
+                    <div>
+                    <input type="text" class="search-text"> 
+                    <button class="icofont-search-1 strip-btn menu-btn"></button>
+                    </div>
                     <div class="rows">
-                        <button class="icofont-search-1 strip-btn menu-btn"></button>
-                        <button class="strip-btn notify-btn">
-                            <i class="icofont-air-balloon"></i>
-                            <span class="notification"></span>
-                        </button>
+                        <button class="create-btn">Create new link</button>
                         <div class="rows user-image">
-                            <img src="" alt="">
-                            <span>[User's username]</span>
+                            <span>John Doe</span>
                             <button class="icofont-caret-down strip-btn"></button>
                         </div>
                     </div>
                 </div>
-                <div class="body-content">
-                    <div class="pane"></div>
-                    <div class="pane"></div>
-                    <div class="pane"></div>
-                    <div class="pane"></div>
+                <div class="body-con">
+                    <div class="pane pane1"><div>Short URLss Created</div><br> <div class="outcome">5</div></div>
+                    <div class="pane pane2"><div>Latest URL<br> created</div><br> <div class="outcome">2</div></div>
+                    <div class="pane pane3"><div>Total Clicks<br></div> <div class="outcome">24</div></div>
+                    <div class="pane pane4"><div>Top Browsers <br></div> <div class="outcome">Firefox</div></div>
                 </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th><input type="checkbox" style="text-align:center;" ng-model="x.dedbuffer"></th>
+                                <th scope="col">Date</th>
+                                <th scope="col">Short Link</th>
+                                <th scope="col">Original Link</th>
+                                <th scope="col">Clicks</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="centered">
+                                    <input type="checkbox" style="text-align:center;" ng-model="x.dedbuffer">
+                                </td>
+                                <td>12:50 PM</td>
+                                <td>dsc.ly/Events</td>
+                                <td>https://eventsprep.com</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td class="centered">
+                                    <input type="checkbox" style="text-align:center;" ng-model="x.dedbuffer">
+                                </td>
+                                <td>13:50 PM</td>
+                                <td>dsc.ly/mydrive</td>
+                                <td>https://drive.google.com/drive/folders/0B6RiB8cVZQhmNFN</td>
+                                <td>2</td>
+                            </tr>
+                                        
+                            <tr>
+                                <td class="centered">
+                                    <input type="checkbox" style="text-align:center;" ng-model="x.dedbuffer">
+                                </td>
+                                <td>14:50 PM</td>
+                                <td>dsc.ly/chat</td>
+                                <td>https://web.whatsapp.com/</td>
+                                <td>34</td>
+                            </tr>
+                        </tbody>
+                      
+                    </table>
             </div>
         </div>
+        
     </main>
 
     <footer class="cols">
         <div class="links rows">
             <div class="cols">
-                <span class="heading">HELP LINKS</span>
                 <a href="#">Contact Us</a>
                 <a href="#">About Us</a>
                 <a href="#">Terms and Conditions</a>
             </div>
     
             <div class="cols">
-                <span class="heading">QUICK LINKS</span>
                 <a href="#">Log In</a>
                 <a href="#">About Us</a>
             </div>
 
             <div class="cols">
-                <span class="heading">SOCIAL LINKS</span>
-                <a href="#">Whatsapp</a>
+                <a href="#">Whatsapp</a>    
                 <a href="#">Twitter</a>
                 <a href="#">Instagram</a>
                 <a href="#">Facebook</a>
@@ -80,8 +115,9 @@
         </div>
 
         <div class="fill-container">
-            <span class="rows"><hr>Copyright &copy; 2019 Shortlink.com. All rights reserved<hr></span>
+            <span class="rows">Copyright &copy; 2019 Shortlink.com. All rights reserved</span>
         </div>
     </footer>
+    <script src="app.js"></script>
 </body>
 </html>
