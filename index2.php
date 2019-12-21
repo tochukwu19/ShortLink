@@ -32,7 +32,6 @@ if (isset($_GET['url']) && ($_GET[url] != "")) {
 		</form>
 	</center>
 	<?php
-	//function to get the short url
 	function getShortUrl($url)
 	{	
 		global $conn, $base_url;
@@ -42,19 +41,13 @@ if (isset($_GET['url']) && ($_GET[url] != "")) {
 		if ($countURL > 0) {
 			$row = mysqli_fetch_assoc($resultURL);
 			$ddd = $row['short_code'];
-		?>
-		<p>There's already a shortcode for this URL: <a href="<?php echo $base_url.''.$ddd?>"><?php echo "$ddd"; ?></a></p>
-		<?php
+			echo "There's already a shortcode for this URL: '$ddd'";
 			return $row['short_code'];
 		}else{
 			$short_code = checkUniqueId();
 			$sql = "INSERT INTO url_shorten (url, short_code, hits) VALUES('$url', '$short_code', '0')";
 			$resultSQL = mysqli_query($conn,$sql);
-			if ($resultSQL === true) {?>
-				<div>
-					<p>Click here: <a href="<?php echo $base_url.''.$short_code?>"><?php echo "$short_code"; ?></a></p>
-				</div>
-			<?php
+			if ($resultSQL === true) {
 				echo "Your short Link is '.$base_url.'/'.$short_code.'";
 				return $short_code;
 			}else{
@@ -101,7 +94,7 @@ if (isset($_GET['url']) && ($_GET[url] != "")) {
 			return $row['url'];
 		}else{
 			die("INVALID LINK");
-		}	
+		}
 	}
 ?>
 </body>

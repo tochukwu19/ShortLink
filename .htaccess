@@ -1,4 +1,2 @@
-RewriteEngine On
-
-RewriteCond $1 !^(index2\.php)
-RewriteRule ^(.*)$ index2.php?redirect=$1 [L]
+RewriteEngine on
+RewriteRule ^([a-z0-9]{6})$ index.php?redirect=$1 [L]
